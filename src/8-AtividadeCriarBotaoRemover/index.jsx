@@ -12,6 +12,9 @@
 
 import { useState } from "react";
 
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+
 export default function Home() {
 
   const [listaProdutos, setProdutos] = useState([
@@ -44,7 +47,15 @@ export default function Home() {
   };
 
   return (
+
+  
+
     <div>
+
+      <div>
+    <Header title={"Kiyota' Fragance"}/>
+  </div>
+
       <h1>Kiyota' Fragance</h1>
 
       {listaProdutos.map((produto) => (
@@ -62,6 +73,11 @@ export default function Home() {
           <button onClick={() => removerPedido(produto.id)}>Remover</button>
         </div>
       ))}
+
+    <div>
+    <Footer desenvolvedor={"Matheus Kiyota"}/>
+  </div>
+
     </div>
   );
 }
