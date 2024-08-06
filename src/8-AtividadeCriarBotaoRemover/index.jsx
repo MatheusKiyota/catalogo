@@ -10,10 +10,10 @@
 // Utilize `setListaPedidos` para atualizar o estado com a nova lista filtrada.
 // Exemplo: `setListaPedidos(listaAux);`
 
-import { useState } from "react";
-
+import React, { useState } from "react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import Soma from "./components/Soma";
 
 export default function Home() {
 
@@ -46,17 +46,20 @@ export default function Home() {
     setListaPedidos(listaAux);
   };
 
-  return (
-
+  const FuncaoAlerta = () => {
+    alert(<Soma a={5} b={10} />);
   
+  };
 
+  return (
     <div>
+      <div className="cabecario"> 
+        <Header FuncaoAlerta={FuncaoAlerta} title={"Kiyota' Fragance"} /> 
+      </div>
 
-      <div>
-    <Header title={"Kiyota' Fragance"}/>
-  </div>
+      
 
-      <h1>Kiyota' Fragance</h1>
+      <h1>Perfumes</h1>
 
       {listaProdutos.map((produto) => (
         <div key={produto.id}>
@@ -74,10 +77,10 @@ export default function Home() {
         </div>
       ))}
 
-    <div>
-    <Footer desenvolvedor={"Matheus Kiyota"}/>
-  </div>
 
+      <div>
+        <Footer desenvolvedor={"Matheus Kiyota"} />
+      </div>
     </div>
   );
 }

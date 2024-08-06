@@ -62,3 +62,9 @@ li a:hover {
         padding: 10px;
     }
 }
+
+.cabecario{
+    background-color: black;
+    color: white;
+    width: 100%;
+}

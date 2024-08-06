@@ -17,11 +17,9 @@ export default function Home() {
     const adicionarItemPedidos = (objeto) => {
       setListaPedidos([...listaPedidos,objeto])
     }
-
   return (
     <div>
         <h1> Kiyota's Fragance</h1>
-
         {
           listaProdutos.map((produto) =>
           <div key={produto.id}> 
@@ -39,9 +37,6 @@ export default function Home() {
               </div>
             )
           }
-
-      
     </div>
-   
   );
 }
